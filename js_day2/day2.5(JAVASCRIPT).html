@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const vehicle={
+    brand:"Mercedes benz',
+    model:'A class',
+    vehicleid:101,
+    variant:'A class A200 D Sport Edition',
+    specification:
+    {
+        firstGear:console.log((show1())),
+        secondGear:console.log((show2())),
+        maxSpeed:150;
+        changeGear() {
+            return this.show1()+" "+this.show2();
+
+        }
+    } 
+};
+function show1() {
+    console.log("Nothing");
+}
+    function show2() 
+    {
+        console.log("will be happened");
+    }
+
+
+console.log('vehicle id : '+vehicle['vehicleid']);
+console.log('Brand:' +vehicle['brand']);
+console.log('model:' +vehicle['model']);
+console.log('variant:' +vehicle['variant']);
+console.log('Speed:' +vehicle.specification.maxSpeed);
+console.log('Change gear:' +vehicle.specification.changeGear());
+</script>
+</body>
+</html>
