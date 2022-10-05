@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="uid" id="uid"> <button onclick="displayUser()">get Details</button>
+<input type="text" name="delete" id="delete"><button onclick="displayUser()">delete</button>
+    <div id="mydiv">here user will be displayed!</div>
+
+    <script>
+        function displayUser() {
+            let x = document.getElementById('uid').value;
+
+            fetch('https://jsonplaceholder.typicode.com/users/'+x).then((response) => response.json()).then((data) => document.getElementById('mydiv').innerHTML = JSON.stringify(data));
+            console.log(`x : ${x}`);
+        }
+
+    </script>
+</body>
+
+</html>
