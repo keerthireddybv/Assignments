@@ -1,48 +1,40 @@
-<!Doctype html>
+<!DOCTYPE html>
+
+<html lang="en">
 
 <head>
-    <title>fetch API getDetails</title>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+
+  <title>Document</title>
 
 </head>
 
 <body>
-    UserId:<input type="text" name="uid" id="uid">
-    <div>
-        <button onclick="validateForm()">GET DETAILS</button>
-    </div>
-    <ul id="authors"></ul>
 
-    <script>
-     
-        const ul = document.getElementById('authors');
-    
+  <input type="text" name="uid" id="uid"><button onclick="displayUser()">get details</button>
 
-        fetch("https://jsonplaceholder.typicode.com/users/"+document.getElementById('uid').value);
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                let authors = data;
+  <div id="mydiv">here user will be displayed</div>
 
-                authors.map(function (author) {
-                    let li = document.createElement('li');
-                    let name = document.createElement('h2');
-                    let email = document.createElement('span');
+  <script>
 
-                    name.innerHTML = `${author.name}`;
-                    email.innerHTML = `${author.email}`;
+    function displayUser(){
 
-                    li.appendChild(name);
-                    li.appendChild(email);
-                    list.appendChild(li);
-                });
-            }).
-    .catch(function (error) {
-                console.log(error);
-            });
+      let x=document.getElementById('uid').value;
 
-        ul.appendChild(list);
-    </script>
+      fetch('https://jsonplaceholder.typicode.com/users/'+x).then((Response)=>Response.json()).then((data)=>document.getElementById('mydiv').innerHTML=JSON.stringify(data));
+
+      console.log(`x: ${x}`);
+
+    }
+
+  </script>
+
 </body>
 
 </html>
+
