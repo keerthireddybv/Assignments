@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+  $("#hide").click(function(){
+
+    $("p").hide();
+
+  });
+
+  $("#show").click(function(){
+
+    $("p").show();
+
+  });
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+    <p class="secret">I am hidden secret #1.</p>
+
+    <p class="secret">I am hidden secret #2.</p>
+
+    <p class="secret">I am hidden secret #2.</p>
+
+    <p>I am <em>not</em> a hidden secret.</p>
+
+   
+
+
+
+<button id="hide">Hide</button>
+
+<button id="show">Show</button>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+
+
+<body>
+
+    User Id:<input type="text" id="user"><br>
+
+    Title:<input type="text" id="title"><br>
+
+    <input type="checkbox" id="check">Completed</input>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var user = $("#user");
+
+
+
+
+            var title = $("#title");
+
+            if (user != "" && title != "") {
+
+                $("#check").click(function () {
+
+
+
+                    $(location).attr('href', 'https://jsonplaceholder.typicode.com/todos ');
+
+
+
+                });
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+
+
+</html>
