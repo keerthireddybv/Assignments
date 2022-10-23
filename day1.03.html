@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="demo" value="">
+
+        <button onclick="insertElement()">Insert Element</button>
+        <button onclick="printElement()">Show Elements</button><br><br>
+
+        
+        <button onclick="delElement()">Delete Element </button>
+
+        <table id="tbl" border="1">
+            <thead >
+                <th >Queue</th>
+            </thead>
+            
+        </table>
+    </div>
+    </div>
+    <script>
+        // program to implement queue data structure
+
+        class Queue {
+//   constructor() {
+//     this.items = {};
+//     this.headIndex = 0;
+//     this.tailIndex = 0;
+//   }
+constructor() {
+        this.items = [];
+    }
+//   enqueue(element) {
+//    this.items[this.tailIndex] = element;
+//     this.tailIndex++;
+//     return this.items;
+//   }
+//   dequeue() {
+//     const item = this.items[this.headIndex];
+//     delete this.items[this.headIndex];
+//     this.headIndex++;
+//     return item;
+//   }
+enqueue(element) {
+        return this.items.push(element);
+    }
+    
+    // remove element from the queue
+    dequeue() {
+        if(this.items.length > 0) {
+            return this.items.shift();
+        }
+    }
+  
+}
+
+let queue = new Queue();
+function insertElement() {
+            let num = document.getElementById('demo').value;
+            queue.enqueue(num);
+            console.log(`${num} inserted successfully`);
+        }
+
+        function printElement() {
+            var tr=document.createElement('tr');
+            tr.innerHTML=queue.items;
+            document.getElementById("tbl").appendChild(tr);
+        
+        }
+
+        function delElement() {
+            queue.dequeue();
+            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>intersection operator</title>
+</head>
+<body>
+ <script>
+    // perform intersection operation
+// elements of set a that are also in set b
+function intersection(setA, setB) {
+    let intersectionSet = new Set();
+
+    for (let i of setB) {
+        if (setA.has(i)) {
+            intersectionSet.add(i);
+        }
+    }
+
+    return intersectionSet;
+}
+
+// two sets of fruits
+const setA = new Set(['apple', 'mango', 'orange']);
+const setB = new Set(['grapes', 'apple', 'banana']);
+
+const result = intersection(setA, setB);
+
+console.log(result);
+</script>
+</body>
+</html>
